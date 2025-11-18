@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CalmPath</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-left">
-                <a href="#" class="logo">CalmPath</a>
+                <a href="index.html" class="logo">CalmPath</a>
             </div>
             <div class="nav-right">
                 <a href="resources.html">Crisis Resources</a>
                 <a href="recovery.html">Recovery</a>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/>
+                    </svg>
+                </button>
                 <a href="tel:+988" class="hotline-button">Hotline</a>
             </div>
         </nav>
@@ -31,37 +37,32 @@
         <div class="tools-grid">
             <article class="tool-card">
                 <div class="tool-image">
-                    <!-- placeholder image -->
-                    <!-- NEED TO LINK TO EXERCISE PAGE -->
-                    <a href="#"><img src="placeholder.jpg" alt="5 Minute Recovery"></a>
+                    <a href="breathing.html"><img src="placeholder.jpg" alt="Breathing Exercise"></a>
                 </div>
-                <a href="#"><h3>5 Minute Recovery</h3></a>
-                <p>Explore a short 5-minute walkthrough experience.</p>
+                <a href="breathing.html"><h3>Breathing Exercise</h3></a>
+                <p>Use guided breathing exercises to calm physical symptoms and reduce anxiety.</p>
             </article>
 
             <article class="tool-card">
                 <div class="tool-image">
-                    <!-- placeholder image -->
-                    <!-- NEED TO LINK TO EXERCISE PAGE -->
-                    <a href="#"><img src="placeholder.jpg" alt="Breathing Exercise"></a>
+                    <a href="grounding.html"><img src="placeholder.jpg" alt="4-3-2-1 Grounding Exercise"></a>
                 </div>
-                <a href="#"><h3>Breathing Exercise</h3></a>
-                <p>Use some breathing exercises to calm physical symptoms.</p>
+                <a href="grounding.html"><h3>4-3-2-1 Grounding Exercise</h3></a>
+                <p>Utilize your senses to ground yourself in your surroundings and the present moment.</p>
             </article>
 
             <article class="tool-card">
                 <div class="tool-image">
-                    <!-- placeholder image -->
-                    <!-- NEED TO LINK TO EXERCISE PAGE -->
-                    <a href="#"><img src="placeholder.jpg" alt="Distraction Exercise"></a>
+                    <a href="muscle-relaxation.html"><img src="placeholder.jpg" alt="Progressive Muscle Relaxation"></a>
                 </div>
-                <a href="#"><h3>Distraction Exercise</h3></a>
-                <p>Utilize the senses to ground yourself in your surroundings.</p>
+                <a href="muscle-relaxation.html"><h3>Progressive Muscle Relaxation</h3></a>
+                <p>Tense and release muscle groups to reduce physical tension and promote deep relaxation.</p>
             </article>
 
         </div>
     </section>
 
+    <script src="js/common/utils.js"></script>
 </body>
 </html>
 
