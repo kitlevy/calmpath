@@ -4,11 +4,11 @@
 
 ## What is CalmPath?
 
-CalmPath is a web application designed to provide immediate, in-the-moment support for people experiencing panic attacks, anxiety, or overwhelming stress. Unlike long-term treatment options, CalmPath offers simple, evidence-based exercises that anyone can use anytime, anywhere – no sign-up required.
+CalmPath is a web application designed to provide immediate, in-the-moment support for people experiencing panic attacks, anxiety, or overwhelming stress. Unlike long-term treatment options, CalmPath offers simple, evidence-based exercises that anyone can use anytime, anywhere–no sign-up required.
 
 ## Our Mission
 
-CalmPath was created to fill a crucial gap in mental health support: providing accessible, in-the-moment tools for people actively experiencing a panic attack. While long-term treatments like therapy, medication, and stress management are essential, few resources exist to help someone cope as a panic attack is happening. CalmPath offers simple, evidence-based exercises that anyone can use anytime – at school, at work, or anywhere – to regain a sense of calm and control when it's needed most.
+CalmPath was created to fill a crucial gap in mental health support: providing accessible, in-the-moment tools for people actively experiencing a panic attack. While long-term treatments like therapy, medication, and stress management are essential, few resources exist to help someone cope as a panic attack is happening. CalmPath offers simple, evidence-based exercises that anyone can use anytime–at school, at work, or anywhere–to regain a sense of calm and control when it's needed most.
 
 ## Features
 
