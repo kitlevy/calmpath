@@ -29,7 +29,7 @@
           <div class="tools-grid">
             <article class="tool-card">
               <div class="tool-image">
-                <a href="#" data-route="/breathing"><img src="breathingexercise.jpg" alt="Breathing Exercise"></a>
+                <a href="#" data-route="/breathing"><img src="js/pages/breathingexercise.jpg" alt="Breathing Exercise"></a>
               </div>
               <a href="#" data-route="/breathing"><h3>Breathing Exercise</h3></a>
               <p>Use guided breathing exercises to calm physical symptoms and reduce anxiety.</p>
@@ -56,4 +56,5 @@
     }
   };
 })();
+
 
