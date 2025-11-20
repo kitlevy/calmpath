@@ -61,6 +61,12 @@
                 emergency same-day appointments, psychiatric services, and referral services. For urgent mental health 
                 concerns, contact the Psychological Emergency Clinician (PEC) at UCS.
               </p>
+          <p>
+            Call
+            <a href="tel:16175523310">1-617-552-3310</a>
+            and press option 2 to speak with an emergency clinician provided
+            through University Health Services.
+          </p>
               <p>
                 <strong>Murray Center for Student Wellness:</strong> Offers comprehensive health and wellness services 
                 including 24/7 medical care, counseling services, and wellness resources.
@@ -84,3 +90,4 @@
     }
   };
 })();
+
