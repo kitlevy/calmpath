@@ -37,7 +37,7 @@
 
             <article class="tool-card">
               <div class="tool-image">
-                <a href="#" data-route="/grounding"><img src="js/pages/IDK.avifg" alt="4-3-2-1 Grounding Exercise"></a>
+                <a href="#" data-route="/grounding"><img src="js/pages/IDK.avif" alt="4-3-2-1 Grounding Exercise"></a>
               </div>
               <a href="#" data-route="/grounding"><h3>4-3-2-1 Grounding Exercise</h3></a>
               <p>Utilize your senses to ground yourself in your surroundings and the present moment.</p>
@@ -56,6 +56,7 @@
     }
   };
 })();
+
 
 
 
