@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalmPath – 4-3-2-1 Grounding Exercise</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-left">
+          <a href="index.html" class="logo">CalmPath</a>
+        </div>
+        <div class="nav-right">
+          <a href="index.html">Home</a>
+          <a href="resources.html">Crisis Resources</a>
+          <a href="recovery.html">Recovery</a>
+          <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/>
+            </svg>
+          </button>
+          <a href="tel:+988" class="hotline-button">Hotline</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="exercise-container">
+        <div class="exercise-header">
+          <h1>4-3-2-1 Grounding Exercise</h1>
+          <p>
+            Use your senses to ground yourself in the present moment. This
+            technique helps reduce anxiety and panic.
+          </p>
+        </div>
+
+        <div class="grounding-step active" id="step4">
+          <h3>4 Things You Can See</h3>
+          <p>
+            Look around you and identify four things you can see. Write them
+            down:
+          </p>
+          <input type="text" id="see1" placeholder="First thing you see..." />
+          <input type="text" id="see2" placeholder="Second thing you see..." />
+          <input type="text" id="see3" placeholder="Third thing you see..." />
+          <input type="text" id="see4" placeholder="Fourth thing you see..." />
+        </div>
+
+        <div class="grounding-step" id="step3">
+          <h3>3 Things You Can Hear</h3>
+          <p>
+            Listen carefully and identify three sounds you can hear. Write them
+            down:
+          </p>
+          <input type="text" id="hear1" placeholder="First sound you hear..." />
+          <input
+            type="text"
+            id="hear2"
+            placeholder="Second sound you hear..."
+          />
+          <input type="text" id="hear3" placeholder="Third sound you hear..." />
+        </div>
+
+        <div class="grounding-step" id="step2">
+          <h3>2 Things You Can Feel</h3>
+          <p>
+            Notice two things you can physically feel or touch. Write them down:
+          </p>
+          <input type="text" id="feel1" placeholder="First thing you feel..." />
+          <input
+            type="text"
+            id="feel2"
+            placeholder="Second thing you feel..."
+          />
+        </div>
+
+        <div class="grounding-step" id="step1">
+          <h3>1 Thing You Can Smell or Taste</h3>
+          <p>Identify one thing you can smell or taste. Write it down:</p>
+          <input
+            type="text"
+            id="smell1"
+            placeholder="Something you can smell or taste..."
+          />
+        </div>
+
+        <div class="grounding-navigation">
+          <button class="btn btn-secondary" id="prevBtn" style="display: none">
+            Previous
+          </button>
+          <button class="btn btn-primary" id="nextBtn">Next</button>
+        </div>
+
+        <div
+          style="
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: var(--purple-lightest);
+            border-radius: 10px;
+          "
+        >
+          <h3 style="color: var(--deep-purple); margin-bottom: 1rem">
+            How it works:
+          </h3>
+          <p style="color: var(--text-primary); line-height: 1.8">
+            The 4-3-2-1 grounding technique helps you reconnect with your
+            immediate environment by engaging your senses. When you're feeling
+            overwhelmed or disconnected, this exercise brings your attention to
+            the present moment. Take your time with each step and really notice
+            what you're experiencing.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/common/utils.js"></script>
+    <script src="js/exercises/grounding.js"></script>
+  </body>
+</html>
