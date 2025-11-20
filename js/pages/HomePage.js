@@ -45,7 +45,7 @@
 
             <article class="tool-card">
               <div class="tool-image">
-                <a href="#" data-route="/muscle-relaxation"><img src="IDK.avif" alt="Progressive Muscle Relaxation"></a>
+                <a href="#" data-route="/muscle-relaxation"><img src="js/pages/Muscle!!.jpg" alt="Progressive Muscle Relaxation"></a>
               </div>
               <a href="#" data-route="/muscle-relaxation"><h3>Progressive Muscle Relaxation</h3></a>
               <p>Tense and release muscle groups to reduce physical tension and promote deep relaxation.</p>
@@ -56,6 +56,7 @@
     }
   };
 })();
+
 
 
 
