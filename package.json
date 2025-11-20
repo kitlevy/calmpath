@@ -1,0 +1,15 @@
+{
+  "name": "CalmPath",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve"
+  },
+  "keywords": ["html", "css"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "11.2.0"
+  }
+}
