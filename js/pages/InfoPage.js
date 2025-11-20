@@ -39,7 +39,7 @@
             </div>
 
             <div class="mh-image">
-              <img src="placeholder.jpg" alt="Mental health illustration" />
+              <img src="js/calmpath.jpg" alt="Mental health illustration" />
             </div>
           </section>
 
@@ -54,3 +54,4 @@
     }
   };
 })();
+
