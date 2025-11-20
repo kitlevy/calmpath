@@ -1,6 +1,5 @@
 /**
  * Breathing Exercise Controller
- * Manages the 4-4-4-4 breathing pattern with visual animation
  */
 
 (function () {
@@ -14,7 +13,7 @@
     constructor(config = {}) {
       super(config);
 
-      // Configuration
+      // Config
       this.phaseDuration = config.phaseDuration || 4000; // 4 seconds per phase
       this.updateInterval = config.updateInterval || 100; // Update every 100ms
       this.scaleAmount = config.scaleAmount || 0.3; // How much to scale the circle
@@ -24,7 +23,6 @@
       this.phaseTime = 0;
       this.timer = null;
 
-      // DOM elements
       this.circle = null;
       this.text = null;
       this.instructions = null;
@@ -32,7 +30,6 @@
       this.pauseBtn = null;
       this.resetBtn = null;
 
-      // Phase configurations
       this.phases = [
         {
           name: "Inhale",
@@ -67,7 +64,6 @@
     }
 
     init() {
-      // Get DOM elements
       this.circle = DOMUtils.getById("breathingCircle");
       this.text = DOMUtils.getById("breathingText");
       this.instructions = DOMUtils.getById("instructions");
@@ -75,13 +71,11 @@
       this.pauseBtn = DOMUtils.getById("pauseBtn");
       this.resetBtn = DOMUtils.getById("resetBtn");
 
-      // Check if elements exist
       if (!this.circle || !this.text || !this.instructions || !this.startBtn) {
         console.error("Breathing exercise: Required DOM elements not found");
         return;
       }
 
-      // Set up event listeners
       this.startBtn.addEventListener("click", () => {
         console.log("Start button clicked");
         this.start();
@@ -99,7 +93,6 @@
         });
       }
 
-      // Initialize timer - bind update method to preserve context
       this.timer = new Timer(() => this.update(), this.updateInterval);
     }
 
@@ -128,7 +121,6 @@
       this.currentPhase = 0;
       this.phaseTime = 0;
 
-      // Reset visual state
       if (this.circle) {
         this.circle.className = "breathing-circle";
         this.circle.style.transform = "scale(1)";
@@ -152,7 +144,6 @@
 
       const phase = this.phases[this.currentPhase];
 
-      // Update visual elements
       if (this.circle) {
         const scale = phase.getScale(progress);
         this.circle.style.transform = `scale(${scale})`;
@@ -161,7 +152,6 @@
       DOMUtils.setText(this.text, phase.text);
       DOMUtils.setText(this.instructions, phase.instruction);
 
-      // Check if phase is complete
       if (this.phaseTime >= this.phaseDuration) {
         this.currentPhase = phase.nextPhase;
         this.phaseTime = 0;
@@ -169,21 +159,7 @@
     }
   }
 
-  // Initialize when DOM is ready
-  function init() {
-    console.log("Initializing Breathing Exercise...");
-    try {
-      window.breathingExercise = new BreathingExercise();
-      window.breathingExercise.init();
-      console.log("Breathing Exercise initialized successfully");
-    } catch (error) {
-      console.error("Error initializing Breathing Exercise:", error);
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
+  window.CalmPath = window.CalmPath || {};
+  window.CalmPath.Exercises = window.CalmPath.Exercises || {};
+  window.CalmPath.Exercises.BreathingExercise = BreathingExercise;
 })();

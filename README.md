@@ -43,7 +43,6 @@ A guided exercise that involves tensing and releasing different muscle groups to
 ## Technology
 
 Built with HTML, CSS, and JavaScript. Features a responsive design that works on desktop and mobile devices.
-
 ---
 
 **Contributors:** Katie Benson, Emily Levy, Cherlin Polanco  

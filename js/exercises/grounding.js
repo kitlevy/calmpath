@@ -1,6 +1,5 @@
 /**
  * 4-3-2-1 Grounding Exercise Controller
- * Manages step-by-step sensory grounding exercise
  */
 
 (function () {
@@ -13,11 +12,11 @@
     constructor(config = {}) {
       super(config);
 
-      // Configuration
+      // Config
       this.totalSteps = 4;
       this.currentStep = this.totalSteps; // Start with step 4 (4 things you can see)
 
-      // Step configurations
+      // Step configs
       this.steps = [
         {
           id: 1,
@@ -49,25 +48,21 @@
         },
       ];
 
-      // DOM elements
       this.prevBtn = null;
       this.nextBtn = null;
       this.completionSection = null;
     }
 
     init() {
-      // Get DOM elements
       this.prevBtn = DOMUtils.getById("prevBtn");
       this.nextBtn = DOMUtils.getById("nextBtn");
       this.completionSection = DOMUtils.getById("completionSection");
 
-      // Check if elements exist
       if (!this.nextBtn) {
         console.error("Grounding exercise: Required DOM elements not found");
         return;
       }
 
-      // Set up event listeners
       if (this.prevBtn) {
         this.prevBtn.addEventListener("click", () => {
           console.log("Previous button clicked");
@@ -79,12 +74,10 @@
         this.nextStep();
       });
 
-      // Initialize display
       this.updateStepDisplay();
     }
 
     updateStepDisplay() {
-      // Hide all steps first
       for (let i = 1; i <= this.totalSteps; i++) {
         const stepEl = DOMUtils.getById(`step${i}`);
         if (stepEl) {
@@ -93,12 +86,10 @@
         }
       }
 
-      // Show only the current step
       const currentStepEl = DOMUtils.getById(`step${this.currentStep}`);
       if (currentStepEl) {
         currentStepEl.classList.add("active");
         DOMUtils.show(currentStepEl, "block");
-        // Scroll to current step
         currentStepEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
 
@@ -123,7 +114,6 @@
         this.currentStep--;
         this.updateStepDisplay();
       } else {
-        // Complete the exercise
         this.onComplete();
       }
     }
@@ -136,7 +126,6 @@
     }
 
     onComplete() {
-      // Hide all step sections
       for (let i = 1; i <= this.totalSteps; i++) {
         const stepEl = DOMUtils.getById(`step${i}`);
         if (stepEl) {
@@ -144,20 +133,16 @@
         }
       }
 
-      // Hide navigation buttons
       if (this.prevBtn) DOMUtils.hide(this.prevBtn);
       if (this.nextBtn) DOMUtils.hide(this.nextBtn);
 
-      // Show completion section
       if (this.completionSection) {
         DOMUtils.show(this.completionSection, "block");
         this.completionSection.scrollIntoView({ behavior: "smooth" });
       } else {
-        // Fallback if completion section doesn't exist
         this.showCompletionMessage();
       }
 
-      // Set up restart functionality
       const restartBtn = DOMUtils.getById("restartBtn");
       if (restartBtn) {
         restartBtn.addEventListener("click", () => {
@@ -167,7 +152,6 @@
     }
 
     restart() {
-      // Clear all inputs
       this.steps.forEach((step) => {
         step.inputIds.forEach((inputId) => {
           const input = DOMUtils.getById(inputId);
@@ -177,12 +161,10 @@
         });
       });
 
-      // Hide completion section
       if (this.completionSection) {
         DOMUtils.hide(this.completionSection);
       }
 
-      // Show all steps again
       for (let i = 1; i <= this.totalSteps; i++) {
         const stepEl = DOMUtils.getById(`step${i}`);
         if (stepEl) {
@@ -190,23 +172,19 @@
         }
       }
 
-      // Reset to first step
       this.currentStep = this.totalSteps;
 
-      // Show navigation buttons
       if (this.nextBtn) DOMUtils.show(this.nextBtn);
 
       this.updateStepDisplay();
     }
 
     showCompletionMessage() {
-      // Fallback completion message if DOM element doesn't exist
       const message =
         "Great job! You've completed the grounding exercise. Take a moment to notice how you feel now.";
       alert(message);
     }
 
-    // Public method to get current step data (useful for saving progress)
     getStepData() {
       const step = this.steps.find((s) => s.id === this.currentStep);
       if (!step) return null;
@@ -227,7 +205,6 @@
       return data;
     }
 
-    // Public method to get all step data
     getAllStepData() {
       const allData = {};
       this.steps.forEach((step) => {
@@ -250,21 +227,7 @@
     }
   }
 
-  // Initialize when DOM is ready
-  function init() {
-    console.log("Initializing Grounding Exercise...");
-    try {
-      window.groundingExercise = new GroundingExercise();
-      window.groundingExercise.init();
-      console.log("Grounding Exercise initialized successfully");
-    } catch (error) {
-      console.error("Error initializing Grounding Exercise:", error);
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
+  window.CalmPath = window.CalmPath || {};
+  window.CalmPath.Exercises = window.CalmPath.Exercises || {};
+  window.CalmPath.Exercises.GroundingExercise = GroundingExercise;
 })();

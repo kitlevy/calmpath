@@ -1,6 +1,5 @@
 /**
  * Progressive Muscle Relaxation Exercise Controller
- * Manages guided muscle relaxation with timer
  */
 
 (function () {
@@ -14,7 +13,7 @@
     constructor(config = {}) {
       super(config);
 
-      // Configuration
+      // Config
       this.stepPauseDuration = config.stepPauseDuration || 2000; // Pause between steps (increased to 2s)
 
       // Exercise steps
@@ -81,13 +80,11 @@
         },
       ];
 
-      // State
       this.currentStepIndex = 0;
       this.stepStartTime = 0;
       this.timer = null;
       this.stepTimer = null;
 
-      // DOM elements
       this.stepTitle = null;
       this.stepInstructions = null;
       this.timerDisplay = null;
@@ -97,7 +94,6 @@
     }
 
     init() {
-      // Get DOM elements
       this.stepTitle = DOMUtils.getById("stepTitle");
       this.stepInstructions = DOMUtils.getById("stepInstructions");
       this.timerDisplay = DOMUtils.getById("timer");
@@ -105,7 +101,6 @@
       this.pauseBtn = DOMUtils.getById("pauseBtn");
       this.resetBtn = DOMUtils.getById("resetBtn");
 
-      // Check if elements exist
       if (!this.stepTitle || !this.stepInstructions || !this.startBtn) {
         console.error(
           "Muscle relaxation exercise: Required DOM elements not found"
@@ -113,7 +108,6 @@
         return;
       }
 
-      // Set up event listeners
       this.startBtn.addEventListener("click", () => {
         console.log("Start button clicked");
         this.start();
@@ -131,10 +125,8 @@
         });
       }
 
-      // Initialize timer for step countdown
       this.stepTimer = new Timer(() => this.updateTimer(), 100);
 
-      // Initialize display
       this.updateStep();
     }
 
@@ -179,7 +171,6 @@
       DOMUtils.setText(this.stepInstructions, step.instruction);
 
       if (step.duration > 0 && this.isActive) {
-        // Record when this step started
         this.stepStartTime = Date.now();
 
         if (this.timerDisplay) {
@@ -216,7 +207,6 @@
       const step = this.steps[this.currentStepIndex];
       if (!step || step.duration === 0) return;
 
-      // Calculate actual elapsed time
       const elapsed = Date.now() - this.stepStartTime;
       const remaining = Math.max(0, step.duration - elapsed);
       const secondsRemaining = Math.ceil(remaining / 1000);
@@ -225,14 +215,12 @@
         DOMUtils.setText(this.timerDisplay, secondsRemaining);
       }
 
-      // Check if step is complete
       if (remaining <= 0) {
         this.stepTimer.stop();
         if (this.timerDisplay) {
           DOMUtils.hide(this.timerDisplay);
         }
 
-        // Move to next step
         if (this.currentStepIndex < this.steps.length - 1) {
           this.currentStepIndex++;
           setTimeout(() => {
@@ -241,7 +229,6 @@
             }
           }, this.stepPauseDuration);
         } else {
-          // Exercise complete
           this.isActive = false;
           DOMUtils.show(this.startBtn);
           DOMUtils.hide(this.pauseBtn);
@@ -249,12 +236,10 @@
       }
     }
 
-    // Public method to get current step
     getCurrentStep() {
       return this.steps[this.currentStepIndex];
     }
 
-    // Public method to get progress
     getProgress() {
       return {
         currentStep: this.currentStepIndex + 1,
@@ -264,21 +249,7 @@
     }
   }
 
-  // Initialize when DOM is ready
-  function init() {
-    console.log("Initializing Muscle Relaxation Exercise...");
-    try {
-      window.muscleRelaxationExercise = new MuscleRelaxationExercise();
-      window.muscleRelaxationExercise.init();
-      console.log("Muscle Relaxation Exercise initialized successfully");
-    } catch (error) {
-      console.error("Error initializing Muscle Relaxation Exercise:", error);
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
+  window.CalmPath = window.CalmPath || {};
+  window.CalmPath.Exercises = window.CalmPath.Exercises || {};
+  window.CalmPath.Exercises.MuscleRelaxationExercise = MuscleRelaxationExercise;
 })();
