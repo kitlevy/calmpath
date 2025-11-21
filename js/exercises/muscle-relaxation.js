@@ -14,7 +14,7 @@
       super(config);
 
       // Config
-      this.stepPauseDuration = config.stepPauseDuration || 2000; // Pause between steps (increased to 2s)
+      this.stepPauseDuration = config.stepPauseDuration || 0;
 
       // Exercise steps
       this.steps = [
@@ -22,61 +22,61 @@
           title: "Get Ready",
           instruction:
             "Find a comfortable position. Take a few deep breaths and prepare to begin.",
-          duration: 0,
+          duration: 10000,
         },
         {
           title: "Feet and Calves",
           instruction:
-            "Tense the muscles in your feet and calves by pointing your toes downward. Hold for 5 seconds, then release and notice the relaxation.",
-          duration: 5000,
+            "Tense the muscles in your feet and calves by pointing your toes downward. Hold for 10 seconds, then release and notice the relaxation.",
+          duration: 10000,
         },
         {
           title: "Thighs",
           instruction:
-            "Tense your thigh muscles by squeezing them together. Hold for 5 seconds, then release and feel the relaxation.",
-          duration: 5000,
+            "Tense your thigh muscles by squeezing them together. Hold for 10 seconds, then release and feel the relaxation.",
+          duration: 10000,
         },
         {
           title: "Buttocks",
           instruction:
-            "Squeeze your buttocks muscles tightly. Hold for 5 seconds, then release and notice the relief.",
-          duration: 5000,
+            "Squeeze your buttocks muscles tightly. Hold for 10 seconds, then release and notice the relief.",
+          duration: 10000,
         },
         {
           title: "Stomach",
           instruction:
-            "Tense your abdominal muscles by pulling your stomach in. Hold for 5 seconds, then release and breathe naturally.",
-          duration: 5000,
+            "Tense your abdominal muscles by pulling your stomach in. Hold for 10 seconds, then release and breathe naturally.",
+          duration: 10000,
         },
         {
           title: "Hands and Arms",
           instruction:
-            "Make fists with your hands and tense your entire arms. Hold for 5 seconds, then release and feel the relaxation flow through your arms.",
-          duration: 5000,
+            "Make fists with your hands and tense your entire arms. Hold for 10 seconds, then release and feel the relaxation flow through your arms.",
+          duration: 10000,
         },
         {
           title: "Shoulders",
           instruction:
-            "Raise your shoulders up toward your ears, tensing them tightly. Hold for 5 seconds, then release and let them drop naturally.",
-          duration: 5000,
+            "Raise your shoulders up toward your ears, tensing them tightly. Hold for 10 seconds, then release and let them drop naturally.",
+          duration: 10000,
         },
         {
           title: "Face",
           instruction:
-            "Scrunch up your entire face - forehead, eyes, nose, mouth. Hold for 5 seconds, then release and feel your face relax completely.",
-          duration: 5000,
+            "Scrunch up your entire face - forehead, eyes, nose, mouth. Hold for 10 seconds, then release and feel your face relax completely.",
+          duration: 10000,
         },
         {
           title: "Full Body",
           instruction:
-            "Tense your entire body at once - from head to toe. Hold for 5 seconds, then release everything and feel the complete relaxation.",
-          duration: 5000,
+            "Tense your entire body at once - from head to toe. Hold for 10 seconds, then release everything and feel the complete relaxation.",
+          duration: 10000,
         },
         {
           title: "Complete",
           instruction:
             "Take a few moments to notice how your body feels. You've completed the progressive muscle relaxation exercise. Notice the sense of calm and relaxation throughout your body.",
-          duration: 0,
+          duration: 10000,
         },
       ];
 

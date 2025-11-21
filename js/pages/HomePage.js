@@ -29,7 +29,7 @@
           <div class="tools-grid">
             <article class="tool-card">
               <div class="tool-image">
-                <a href="#" data-route="/breathing"><img src="js/pages/breathingexercise.jpg" alt="Breathing Exercise"></a>
+                <a href="#" data-route="/breathing"><img src="images/breathing.png" alt="Breathing Exercise"></a>
               </div>
               <a href="#" data-route="/breathing"><h3>Breathing Exercise</h3></a>
               <p>Use guided breathing exercises to calm physical symptoms and reduce anxiety.</p>
@@ -37,7 +37,7 @@
 
             <article class="tool-card">
               <div class="tool-image">
-                <a href="#" data-route="/grounding"><img src="js/pages/IDK.avif" alt="4-3-2-1 Grounding Exercise"></a>
+                <a href="#" data-route="/grounding"><img src="images/grounding.avif" alt="4-3-2-1 Grounding Exercise"></a>
               </div>
               <a href="#" data-route="/grounding"><h3>4-3-2-1 Grounding Exercise</h3></a>
               <p>Utilize your senses to ground yourself in your surroundings and the present moment.</p>
@@ -45,7 +45,7 @@
 
             <article class="tool-card">
               <div class="tool-image">
-                <a href="#" data-route="/muscle-relaxation"><img src="js/pages/Muscle!!.jpg" alt="Progressive Muscle Relaxation"></a>
+                <a href="#" data-route="/muscle-relaxation"><img src="images/muscle.jpg" alt="Progressive Muscle Relaxation"></a>
               </div>
               <a href="#" data-route="/muscle-relaxation"><h3>Progressive Muscle Relaxation</h3></a>
               <p>Tense and release muscle groups to reduce physical tension and promote deep relaxation.</p>

@@ -10,8 +10,8 @@
   window.CalmPath.Header = {
     /**
      * Render header component
-     * @param {string} currentRoute - Current route path
-     * @returns {string} HTML string for header
+     * @param {string} currentRoute
+     * @returns {string}
      */
     render(currentRoute = '/') {
       return `
@@ -36,9 +36,6 @@
       `;
     },
 
-    /**
-     * Initialize header (attach to DOM if needed)
-     */
     init() {
       // Theme toggle is initialized in utils.js
       // Navigation links are handled by router
