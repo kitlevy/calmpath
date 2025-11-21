@@ -9,7 +9,7 @@
   window.CalmPath.RecoveryPage = {
     /**
      * Render recovery page
-     * @returns {string} HTML string for recovery page
+     * @returns {string}
      */
     render() {
       const Header = window.CalmPath.Header;

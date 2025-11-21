@@ -2,16 +2,12 @@
  * Common utility functions for CalmPath exercises
  */
 
-// Create global namespace
 window.CalmPath = window.CalmPath || {};
 
-/**
- * DOM utility functions
- */
 window.CalmPath.DOMUtils = {
   /**
    * Get element by ID
-   * @param {string} id - Element ID
+   * @param {string} id
    * @returns {HTMLElement|null}
    */
   getById(id) {
@@ -20,8 +16,8 @@ window.CalmPath.DOMUtils = {
 
   /**
    * Show an element
-   * @param {HTMLElement} element - Element to show
-   * @param {string} display - Display style (default: 'inline-block')
+   * @param {HTMLElement} element
+   * @param {string} display
    */
   show(element, display = "inline-block") {
     if (element) {
@@ -31,7 +27,7 @@ window.CalmPath.DOMUtils = {
 
   /**
    * Hide an element
-   * @param {HTMLElement} element - Element to hide
+   * @param {HTMLElement} element
    */
   hide(element) {
     if (element) {
@@ -41,8 +37,8 @@ window.CalmPath.DOMUtils = {
 
   /**
    * Set text content
-   * @param {HTMLElement} element - Element to update
-   * @param {string} text - Text to set
+   * @param {HTMLElement} element
+   * @param {string} text
    */
   setText(element, text) {
     if (element) {
@@ -56,7 +52,6 @@ window.CalmPath.DOMUtils = {
  */
 window.CalmPath.Timer = class {
   constructor(callback, interval = 100) {
-    // Store callback - arrow functions already preserve context
     this.callback = callback;
     this.interval = interval;
     this.timerId = null;
@@ -90,9 +85,6 @@ window.CalmPath.Timer = class {
   }
 };
 
-/**
- * Exercise controller base class
- */
 window.CalmPath.ExerciseController = class {
     constructor(config) {
         this.config = config || {};
