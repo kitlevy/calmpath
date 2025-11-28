@@ -267,7 +267,7 @@ nav {
     color: var(--white);
     font-size: 1.5rem;
     font-weight: bold;
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     box-shadow: 0 4px 20px rgba(74, 20, 140, 0.3);
 }
 
@@ -423,123 +423,378 @@ nav {
 }
 
 /* Info Page */
-.mental-health-matters {
+.info-page {
     max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
-    align-items: center;
 }
 
-.mh-content h1 {
+.mission-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.9fr);
+    gap: 3rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.mission-content {
+    background: var(--bg-secondary);
+    border-radius: 18px;
+    padding: 2.5rem;
+    box-shadow: 0 16px 30px rgba(74, 20, 140, 0.08);
+    border: 1px solid rgba(85, 55, 121, 0.08);
+}
+
+.mission-content h2 {
     color: var(--deep-purple);
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    margin-top: 0.75rem;
+}
+
+.mission-content p {
+    color: var(--text-primary);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+    transition: color 0.3s;
+}
+
+.mission-content p:last-of-type {
     margin-bottom: 2rem;
 }
 
-.mh-point {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: linear-gradient(135deg, var(--purple-lightest), var(--bg-secondary));
-    border-radius: 10px;
-    border-left: 4px solid var(--purple-medium);
-    transition: background 0.3s;
+.mission-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-.mh-point h3 {
-    color: var(--deep-purple);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.mh-point p {
-    color: var(--text-primary);
-    line-height: 1.8;
-    transition: color 0.3s;
-}
-
-.mh-image {
+.mission-image {
     text-align: center;
 }
 
-.mh-image img {
+.mission-image img {
     max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(74, 20, 140, 0.2);
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(74, 20, 140, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.mission {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 2rem;
-    background: var(--bg-secondary);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(74, 20, 140, 0.1);
-    transition: background-color 0.3s;
+.mission-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(74, 20, 140, 0.3);
 }
 
-.mission h2 {
-    color: var(--deep-purple);
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.mission p {
-    color: var(--text-primary);
-    line-height: 1.8;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 /* Resources Pages */
-.crisis-resources,
-.recovery-resources {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 2rem;
+.resources-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-.crisis-resources h1,
-.recovery-resources h1 {
-    color: var(--deep-purple);
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
 }
 
-.resource-item {
+.resources-grid.two-column {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.resource-card {
     background: var(--bg-secondary);
+    border-radius: 16px;
     padding: 2rem;
-    margin: 1.5rem 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(74, 20, 140, 0.1);
-    border-left: 4px solid var(--purple-medium);
-    transition: background-color 0.3s;
+    border: 1px solid rgba(85, 55, 121, 0.1);
+    box-shadow: 0 18px 35px rgba(74, 20, 140, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.resource-item h3 {
+.resource-card.featured {
+    background: linear-gradient(135deg, var(--purple-lightest), var(--bg-secondary));
+    border: 1px solid rgba(85, 55, 121, 0.2);
+}
+
+.card-badge {
+    align-self: flex-start;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    background: rgba(85, 55, 121, 0.12);
     color: var(--deep-purple);
-    font-size: 1.5rem;
+    border-radius: 999px;
+}
+
+.resource-card h3 {
+    color: var(--deep-purple);
+    font-size: 1.4rem;
+}
+
+.resource-card p {
+    color: var(--text-secondary);
+}
+
+.card-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    padding-left: 0;
+}
+
+.card-list li::before {
+    content: "•";
+    color: var(--purple-medium);
+    margin-right: 0.5rem;
+}
+
+.card-link {
+    margin-top: auto;
+    font-weight: 600;
+    color: var(--purple-medium);
+}
+
+.card-link:hover {
+    color: var(--deep-purple);
+}
+
+.guide-panel {
+    background: linear-gradient(120deg, var(--purple-medium), var(--purple-dark));
+    color: var(--white);
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: center;
+    box-shadow: 0 25px 60px rgba(74, 20, 140, 0.25);
+}
+
+.guide-panel h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.guide-panel p {
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 520px;
+}
+
+/* Recovery Page */
+.recovery-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page-hero {
+    background: linear-gradient(120deg, var(--purple-dark), var(--purple-medium));
+    color: var(--white);
+    padding: 3rem;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(74, 20, 140, 0.25);
+}
+
+.page-hero.compact {
+    padding: 2.5rem;
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.resource-item p {
-    color: var(--text-primary);
-    line-height: 1.8;
-    transition: color 0.3s;
+.page-hero .lead {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.15rem;
+    max-width: 680px;
+    margin-bottom: 1.75rem;
 }
 
-.resource-item a {
-    color: var(--purple-medium);
-    text-decoration: none;
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.85rem;
     font-weight: 600;
-    transition: color 0.3s;
+    color: var(--purple-lightest);
+    display: inline-block;
+    margin-bottom: 0.75rem;
 }
 
-.resource-item a:hover {
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 0.75rem 1.75rem;
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.recovery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.9fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+.journey-content {
+    background: var(--bg-secondary);
+    border-radius: 18px;
+    padding: 2.5rem;
+    box-shadow: 0 16px 30px rgba(74, 20, 140, 0.08);
+    border: 1px solid rgba(85, 55, 121, 0.08);
+}
+
+.journey-content h2 {
     color: var(--deep-purple);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.journey-steps {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    padding-left: 0;
+}
+
+.journey-steps li {
+    padding-left: 1rem;
+    border-left: 3px solid rgba(85, 55, 121, 0.25);
+}
+
+.step-title {
+    font-weight: 600;
+    color: var(--deep-purple);
+    display: block;
+}
+
+.step-detail {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.journey-note {
+    background: linear-gradient(165deg, var(--purple-light), var(--purple-dark));
+    color: var(--white);
+    border-radius: 18px;
+    padding: 2.25rem;
+    box-shadow: 0 25px 45px rgba(74, 20, 140, 0.25);
+}
+
+.journey-note h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.journey-note p,
+.journey-note li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.micro-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.journey-note .btn {
+    box-shadow: none;
+}
+
+.micro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+.micro-card {
+    background: var(--bg-secondary);
+    border-radius: 14px;
+    padding: 1.75rem;
+    border: 1px solid rgba(85, 55, 121, 0.1);
+    box-shadow: 0 10px 22px rgba(74, 20, 140, 0.08);
+}
+
+.micro-card h4 {
+    color: var(--deep-purple);
+    margin-bottom: 0.5rem;
+}
+
+.cta-panel {
+    background: linear-gradient(120deg, var(--purple-medium), var(--purple-dark));
+    color: var(--white);
+    border-radius: 20px;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 25px 60px rgba(74, 20, 140, 0.25);
+}
+
+.cta-panel h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta-panel p {
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 520px;
+}
+
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cta-panel .btn-ghost {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: var(--white);
 }
 
 /* Dark Mode Toggle */
@@ -588,10 +843,6 @@ nav {
         grid-template-columns: 1fr;
     }
 
-    .mental-health-matters {
-        grid-template-columns: 1fr;
-    }
-
     .exercise-container {
         padding: 1rem;
     }
@@ -599,6 +850,45 @@ nav {
     .breathing-circle {
         width: 150px;
         height: 150px;
+    }
+
+    .page-hero {
+        padding: 2rem;
+    }
+
+    .hero-actions,
+    .cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .journey-grid,
+    .recovery-grid,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-panel {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .mission-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mission-content {
+        padding: 2rem;
+    }
+
+    .mission-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
     }
 }
 
